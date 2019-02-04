@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import reqwest from 'reqwest'
+import {
+  Button
+} from 'components'
 
 const { string } = PropTypes
 
@@ -125,7 +128,7 @@ export default class Rimp extends Component {
                 :null
               }
               <input id={this.state.formID} type='email' onChange={this.validateEmail} ref='email' className={this.state.inputStyles} placeholder={this.state.placeholder} />
-              <button className={this.state.buttonStyles}>{this.state.buttonValue}</button>
+              <Button>{this.state.buttonValue}</button>
             </form>
             {this.state.showError
               ? <div>
